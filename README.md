@@ -34,17 +34,23 @@ The analysis focused on the following stocks from the S&P 500, representing a ra
 
 XGBoost is a boosting algorithm that has gained popularity due to its high predictive performance from ensembling weak learners and regularization techniques,
 but its performance is highly dependent on hyperparameter tuning.
-We employed Bayesian optimization methods with pruning strategies using the Optuna framework to efficiently search the hyperparameter space, achieving 3x speedup in optimization time compared to traditional grid search.
-The objective was to minimize the root mean squared error (RMSE), and we utilized 5-fold cross-validation over 100 trials.
+We employed Bayesian optimization methods with pruning strategies using the **Optuna** framework to efficiently search the hyperparameter space, achieving 3x speedup in optimization time compared to traditional grid search.
+The objective was to minimize the root mean squared error (RMSE), and we ran 5-fold cross-validation over 100 trials.
 
 ## Stock Price Prediction Performance (XGBoost vs Random Forest)
 
 !["Alt text"](plot/xgboost-rf.png)
 
-Observation: While boosting models are known for their superior predictive performance, they are also more sensitive to hyperparameter settings.
-Even thought we fit random forest with hyperparameter tuning over narrow search space,
+### Key Observation:
+
+While boosting models are known for their superior predictive performance through bias reduction, they are also more sensitive to hyperparameter settings.
+Even though we fit random forest with hyperparameter tuning over narrow search space,
 performance gap between the two models is marginal in this experiment.
 XGBoost’s underperformance might stem from its sensitivity to hyperparameter settings.
+Although gradient boosting is renowned for its prediction accuracy through bias reduction,
+random forest could serve as a better alternative if it achieves similar performance with no hyperparameter tuning.
+**These trade-offs should be considered when choosing a model for a specific task,
+which is in line with the no free lunch theorem that states that there is no one model that works best for all problems.**
 
 ## Asset Allocation
 
