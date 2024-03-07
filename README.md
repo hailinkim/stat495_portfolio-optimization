@@ -3,7 +3,7 @@
 This project was completed as part of STAT495: Advanced Data Analysis at Amherst College in Fall 2023.
 The goal of this course project was to create an expository review of a statistical method and demonstrate its simple application to a real-world dataset.
 The project report (`project_report.pdf`) in the same repo provides a detailed explanation of the mathematical underpinning of extreme gradient boosting (XGBoost) models and their application to stock price prediction and portfolio optimization.
-This document showcases the results and implications of the application.
+This document summarizes the results and implications of the application.
 
 ## Introduction
 
